@@ -5,7 +5,14 @@ import CustomerGrowthChart from "./CustomerGrowthChart";
 import CategoryDistributionChart from "./CategoryDistributionChart";
 
 const ChartsGrid: React.FC = () => (
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-4">
+  <div
+    style={{
+      display: "grid",
+ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+      gap: 12,
+      marginBottom: 16,
+    }}
+  >
     <RevenueTrendChart />
     <SalesComparisonChart />
     <CustomerGrowthChart />
